@@ -55,5 +55,12 @@ namespace WindowsFormsApp1
                         }
             }
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            glav gl = new glav();
+            gl.Show();
+            this.Hide();
+        }
     }
 }

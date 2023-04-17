@@ -56,5 +56,24 @@ namespace WindowsFormsApp1
                         }
             }
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+           // var row = бахаев_АвтомастерскаяDataSet.СправочникТоваров.NewRow();
+           // row[0] = textBox1.Text;
+           // row[2] = comboBox1.Text;
+           // row[1] = textBox2.Text;
+           // row[3] = textBox3.Text;
+           // бахаев_АвтомастерскаяDataSet.СправочникТоваров.Rows.Add(row);
+            //this.справочникТоваровTableAdapter.Update(this.бахаев_АвтомастерскаяDataSet.СправочникТоваров);
+            
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            glav gl = new glav();
+            gl.Show();
+            this.Hide();
+        }
     }
 }
