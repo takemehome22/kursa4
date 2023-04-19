@@ -69,13 +69,13 @@ namespace WindowsFormsApp1
         {
             var row = бахаев_АвтомастерскаяDataSet.Заказы.NewRow();
             row[0] = textBox2.Text;
-            row[1] = textBox3.Text;
-            row[2] = textBox4.Text;
-            row[3] = textBox5.Text;
+            row[1] = comboBox1.Text;
+            row[2] = comboBox2.Text;
+            row[3] = comboBox3.Text;
             row[4] = textBox6.Text;
             row[5] = textBox7.Text;
-            row[6] = textBox8.Text;
-            row[7] = textBox9.Text;
+            row[6] = dateTimePicker1.Text;
+            row[7] = dateTimePicker2.Text;
             row[8] = textBox10.Text;
             бахаев_АвтомастерскаяDataSet.Заказы.Rows.Add(row);
             this.заказыTableAdapter.Update(this.бахаев_АвтомастерскаяDataSet.Заказы);

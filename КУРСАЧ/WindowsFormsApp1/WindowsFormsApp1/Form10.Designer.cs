@@ -45,6 +45,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.бахаев_АвтомастерскаяDataSet1 = new WindowsFormsApp1.Бахаев_АвтомастерскаяDataSet();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.справочникТоваровBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -56,13 +57,12 @@
             this.button7 = new System.Windows.Forms.Button();
             this.категорииПоставщиковBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.категорииПоставщиковTableAdapter = new WindowsFormsApp1.Бахаев_АвтомастерскаяDataSetTableAdapters.КатегорииПоставщиковTableAdapter();
-            this.справочникТоваровBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.справочникТоваровBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.бахаев_АвтомастерскаяDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.бахаев_АвтомастерскаяDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.категорииПоставщиковBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.справочникТоваровBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.категорииПоставщиковBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -194,12 +194,18 @@
             this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.comboBox1.DataSource = this.справочникТоваровBindingSource1;
             this.comboBox1.DisplayMember = "НаименованиеТовара";
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(27, 240);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(198, 21);
             this.comboBox1.TabIndex = 18;
             this.comboBox1.ValueMember = "НаименованиеТовара";
+            // 
+            // справочникТоваровBindingSource1
+            // 
+            this.справочникТоваровBindingSource1.DataMember = "СправочникТоваров";
+            this.справочникТоваровBindingSource1.DataSource = this.бахаев_АвтомастерскаяDataSet;
             // 
             // label2
             // 
@@ -298,11 +304,6 @@
             // 
             this.категорииПоставщиковTableAdapter.ClearBeforeFill = true;
             // 
-            // справочникТоваровBindingSource1
-            // 
-            this.справочникТоваровBindingSource1.DataMember = "СправочникТоваров";
-            this.справочникТоваровBindingSource1.DataSource = this.бахаев_АвтомастерскаяDataSet;
-            // 
             // Form10
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -335,8 +336,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.справочникТоваровBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.бахаев_АвтомастерскаяDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.бахаев_АвтомастерскаяDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.категорииПоставщиковBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.справочникТоваровBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.категорииПоставщиковBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
