@@ -13,6 +13,8 @@ namespace WindowsFormsApp1
 
         private void Form10_Load(object sender, EventArgs e)
         {
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "бахаев_АвтомастерскаяDataSet.КатегорииПоставщиков". При необходимости она может быть перемещена или удалена.
+            this.категорииПоставщиковTableAdapter.Fill(this.бахаев_АвтомастерскаяDataSet.КатегорииПоставщиков);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "бахаев_АвтомастерскаяDataSet.СправочникТоваров". При необходимости она может быть перемещена или удалена.
             this.справочникТоваровTableAdapter.Fill(this.бахаев_АвтомастерскаяDataSet.СправочникТоваров);
 
@@ -59,13 +61,13 @@ namespace WindowsFormsApp1
 
         private void button6_Click(object sender, EventArgs e)
         {
-           // var row = бахаев_АвтомастерскаяDataSet.СправочникТоваров.NewRow();
-           // row[0] = textBox1.Text;
-           // row[2] = comboBox1.Text;
-           // row[1] = textBox2.Text;
-           // row[3] = textBox3.Text;
-           // бахаев_АвтомастерскаяDataSet.СправочникТоваров.Rows.Add(row);
-            //this.справочникТоваровTableAdapter.Update(this.бахаев_АвтомастерскаяDataSet.СправочникТоваров);
+            var row = бахаев_АвтомастерскаяDataSet.СправочникТоваров.NewRow();
+            row[0] = textBox2.Text;
+            row[1] = comboBox1.Text;
+            row[2] = textBox3.Text;
+            row[3] = textBox4.Text;
+            бахаев_АвтомастерскаяDataSet.СправочникТоваров.Rows.Add(row);
+            this.справочникТоваровTableAdapter.Update(this.бахаев_АвтомастерскаяDataSet.СправочникТоваров);
             
         }
 

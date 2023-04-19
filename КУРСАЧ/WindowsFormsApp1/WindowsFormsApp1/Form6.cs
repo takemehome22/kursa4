@@ -63,5 +63,14 @@ namespace WindowsFormsApp1
             gl.Show();
             this.Hide();
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            var row = бахаев_АвтомастерскаяDataSet.КатегорииПоставщиков.NewRow();
+            row[0] = textBox2.Text;
+            row[1] = textBox3.Text;
+            бахаев_АвтомастерскаяDataSet.КатегорииПоставщиков.Rows.Add(row);
+            this.категорииПоставщиковTableAdapter.Update(this.бахаев_АвтомастерскаяDataSet.КатегорииПоставщиков);
+        }
     }
 }

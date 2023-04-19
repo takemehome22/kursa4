@@ -63,5 +63,18 @@ namespace WindowsFormsApp1
             gl.Show();
             this.Hide();
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            var row = бахаев_АвтомастерскаяDataSet.Касса.NewRow();
+            row[0] = textBox2.Text;
+            row[1] = textBox3.Text;
+            row[2] = textBox4.Text;
+            row[3] = textBox5.Text;
+            row[4] = textBox6.Text;
+            row[5] = textBox7.Text;
+            бахаев_АвтомастерскаяDataSet.Касса.Rows.Add(row);
+            this.кассаTableAdapter.Update(this.бахаев_АвтомастерскаяDataSet.Касса);
+        }
     }
 }

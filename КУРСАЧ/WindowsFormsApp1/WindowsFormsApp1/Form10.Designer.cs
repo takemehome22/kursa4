@@ -54,10 +54,15 @@
             this.label5 = new System.Windows.Forms.Label();
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
+            this.категорииПоставщиковBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.категорииПоставщиковTableAdapter = new WindowsFormsApp1.Бахаев_АвтомастерскаяDataSetTableAdapters.КатегорииПоставщиковTableAdapter();
+            this.справочникТоваровBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.справочникТоваровBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.бахаев_АвтомастерскаяDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.бахаев_АвтомастерскаяDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.категорииПоставщиковBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.справочникТоваровBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -187,31 +192,14 @@
             // comboBox1
             // 
             this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.comboBox1.DataSource = this.справочникТоваровBindingSource1;
+            this.comboBox1.DisplayMember = "НаименованиеТовара";
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Вакуумный усилитель тормозов",
-            "Втулка стабилизатора СПУ",
-            "Датчик расхода воздуха",
-            "Датчик давления масла",
-            "Клапан электромагнитный L8011",
-            "Датчик положения коленвала",
-            "Датчик положения дроссельной заслонки",
-            "Реле поворотников",
-            "Датчик скорости вращения",
-            "Колодки тормозные",
-            "Фильтр воздушный",
-            "Свеча зажигания",
-            "Патрубок радиатора",
-            "Усилитель бампера",
-            "Ремень ГРМ",
-            "Сайлентблок задней балки",
-            "Планка задней двери",
-            "Пружины подвески передние",
-            "Пружины подвески задние"});
             this.comboBox1.Location = new System.Drawing.Point(27, 240);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(198, 21);
             this.comboBox1.TabIndex = 18;
+            this.comboBox1.ValueMember = "НаименованиеТовара";
             // 
             // label2
             // 
@@ -301,6 +289,20 @@
             this.button7.UseVisualStyleBackColor = false;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
+            // категорииПоставщиковBindingSource
+            // 
+            this.категорииПоставщиковBindingSource.DataMember = "КатегорииПоставщиков";
+            this.категорииПоставщиковBindingSource.DataSource = this.бахаев_АвтомастерскаяDataSet;
+            // 
+            // категорииПоставщиковTableAdapter
+            // 
+            this.категорииПоставщиковTableAdapter.ClearBeforeFill = true;
+            // 
+            // справочникТоваровBindingSource1
+            // 
+            this.справочникТоваровBindingSource1.DataMember = "СправочникТоваров";
+            this.справочникТоваровBindingSource1.DataSource = this.бахаев_АвтомастерскаяDataSet;
+            // 
             // Form10
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -333,6 +335,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.справочникТоваровBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.бахаев_АвтомастерскаяDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.бахаев_АвтомастерскаяDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.категорииПоставщиковBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.справочникТоваровBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -365,5 +369,8 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.BindingSource категорииПоставщиковBindingSource;
+        private Бахаев_АвтомастерскаяDataSetTableAdapters.КатегорииПоставщиковTableAdapter категорииПоставщиковTableAdapter;
+        private System.Windows.Forms.BindingSource справочникТоваровBindingSource1;
     }
 }
