@@ -67,7 +67,7 @@ namespace WindowsFormsApp1
             row[0] = textBox2.Text;
             row[1] = textBox3.Text;
             row[2] = textBox4.Text;
-            row[3] = textBox5.Text;
+            row[3] = maskedTextBox1.Text;
             бахаев_АвтомастерскаяDataSet.Покупатели.Rows.Add(row);
             this.покупателиTableAdapter.Update(this.бахаев_АвтомастерскаяDataSet.Покупатели);
         }
