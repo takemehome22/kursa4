@@ -68,7 +68,7 @@ namespace WindowsFormsApp1
             row[3] = textBox4.Text;
             бахаев_АвтомастерскаяDataSet.СправочникТоваров.Rows.Add(row);
             this.справочникТоваровTableAdapter.Update(this.бахаев_АвтомастерскаяDataSet.СправочникТоваров);
-            
+
         }
 
         private void button7_Click(object sender, EventArgs e)
@@ -76,6 +76,18 @@ namespace WindowsFormsApp1
             glav gl = new glav();
             gl.Show();
             this.Hide();
+        }
+
+
+
+        private void textBox4_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char number = e.KeyChar;
+
+            if (!Char.IsDigit(number))
+            {
+                e.Handled = true;
+            }
         }
 
         private void textBox3_KeyPress(object sender, KeyPressEventArgs e)
@@ -87,15 +99,6 @@ namespace WindowsFormsApp1
                 e.Handled = true;
             }
         }
-
-        private void textBox4_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            char number = e.KeyChar;
-
-            if (!Char.IsDigit(number))
-            {
-                e.Handled = true;
-            }
-        }
     }
 }
+
